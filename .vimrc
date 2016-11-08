@@ -142,6 +142,8 @@
 		let d.projectrc = {'type': 'git', 'url': 'git://github.com/mattolenik/vim-projectrc.git'}
 		let d.project_tags = {'type': 'git', 'ulr': 'git://github.com/still-dreaming-1/vim-project-tags.git'}
 		let d.nerdtree_tabs = {'type': 'git', 'ulr': 'git@github.com:jistr/vim-nerdtree-tabs.git'}
+		let d.unite_outline = {'type': 'git', 'url': 'git@github.com:Shougo/unite-outline.git'}
+		let d.ctags = {'type': 'git', 'url': 'git@github.com:szw/vim-tags.git'}
 	    return d
 	endfun
 
@@ -190,6 +192,8 @@
 		\  'cmake',
 		\  'openproject',
 		\  'projectrc',
+		\  'unite_outline',
+		\  'ctags',
 		\  'xptemplate'], {'auto_install' : 0})
 	endfun
 	call ActivateAddonsExt()	
@@ -202,5 +206,4 @@
 	map <C-n> :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 	let g:NERDTreeDirArrowExpandable = '▸'
-	let g:NERDTreeDirArrowCollapsible = '▾'
-
+	let g:NERDTreeDirArrowCollapsible = '▾'	
